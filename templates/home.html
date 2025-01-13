@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aksara Jobs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="highlight">Aksara</span> Jobs
+    </div>
+    <div class="auth-buttons">
+      <button class="profil-btn" onclick="window.location.href='profil'">Profil</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>CARI PEKERJAAN IMPIANMU DENGAN MUDAH</h1>
+    <p>Temukan berbagai kesempatan pekerjaan terbaik dan mulai perjalanan karirmu hari ini. Apakah kamu mencari pekerjaan penuh waktu atau paruh waktu, kami siap membantu. Pekerjaan berikutnya hanya dengan satu klik!</p>
+
+    <div class="search-bar">
+      <input id="companyInput" type="text" placeholder="Nama Perusahaan">
+      <input id="locationInput" type="text" placeholder="Lokasi">
+      <button class="Cari" onclick="validateSearch()">Cari</button>
+      <button class="lihat-daftar-btn" onclick="window.location.href='lihat-daftar-pekerjaan'">Lihat Daftar Pekerjaan</button>
+    </div>
+    <p id="error-message" style="color: red; font-size: 15px; display: none;">Minimal diisi yaaaa!</p>
+  </section>
+
+  <style>
+    .hero {
+      text-align: center;
+      background-image: url("{{ url_for('static', filename='images/background.jpeg') }}");
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      color: #f9b400;
+      padding: 100px 20px;
+    }
+  </style>
+   <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+</html>

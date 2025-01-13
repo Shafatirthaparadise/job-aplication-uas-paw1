@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Listing</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cari.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header class="navbar1">
+      <ul>
+        <li>
+          <span class="yellow">Aksara</span><span class="black"> Jobs</span>
+        </li>
+      </ul>
+    </header>
+    <div class="content1">
+      <div class="job-list">
+        <!-- Job Card 1 -->
+        <div class="job-card" onclick="updateDetails('UI/UX', 'PT. Teknologi Kreasi Digital', 'Yogyakarta', 'Sarjana di bidang Desain atau bidang terkait', '2+ tahun di desain UI/UX', ['UI/UX Design', 'Wireframing', 'Prototyping'])">
+          <img src="{{ url_for('static', filename='images/UIUX.jpg') }}" alt="UI/UX Job">
+          <div>
+            <h3>UI/UX</h3>
+            <p>PT. Teknologi Kreasi Digital</p>
+            <p>Gaji: Yogyakarta</p>
+            <p>24 November 2024</p>
+          </div>
+        </div>
+        <!-- Job Card 2 -->
+        <div class="job-card" onclick="updateDetails('Digital Marketing', 'PT. Global Nasional', 'Jakarta', 'D3/S1 di bidang pemasaran, komunikasi, atau yang relevan', 'Minimal 2 tahun di bidang digital marketing', ['Pengelolaan Kampanye Iklan Digital', 'Analisis Data dan SEO', 'Social Media Management'])">
+          <img src="{{ url_for('static', filename='images/digital_marketing.jpg') }}" alt="Digital Marketing Job">
+          <div>
+            <h3>Digital Marketing</h3>
+            <p>PT. Global Nasional</p>
+            <p>Gaji: Jakarta</p>
+            <p>24 November 2024</p>
+          </div>
+        </div>
+        <!-- Job Card 3 -->
+        <div class="job-card" onclick="updateDetails('Web Developer', 'PT.abc', 'Bandung', 'S1', '2 Tahun', ['HTML', 'CSS', 'JavaScript', 'React.js'])">
+          <img src="{{ url_for('static', filename='images/web_developer.jpg') }}" alt="Web Developer Job">
+          <div>
+            <h3>Web Developer</h3>
+            <p>PT.abc</p>
+            <p>Gaji: Bandung</p>
+            <p>30 November 2024</p>
+          </div>
+        </div>
+        <!-- Job Card 4 -->
+        <div class="job-card" onclick="updateDetails('Graphic Designer', 'PT.def', 'Surabaya', 'D3/S1', '1 Tahun', ['Adobe Photoshop', 'Illustrator', 'Creative Design'])">
+          <img src="{{ url_for('static', filename='images/graphic_designer.jpg') }}" alt="Graphic Designer Job">
+          <div>
+            <h3>Graphic Designer</h3>
+            <p>PT.def</p>
+            <p>Gaji: Surabaya</p>
+            <p>1 Desember 2024</p>
+          </div>
+        </div>
+        <!-- Job Card 5 -->
+        <div class="job-card" onclick="updateDetails('Content Writer', 'PT.ghi', 'Semarang', 'S1', '1 Tahun', ['Content Creation', 'SEO Writing', 'Proofreading'])">
+          <img src="placeholder.png" alt="Job Image">
+          <div>
+            <h3>Content Writer</h3>
+            <p>PT.ghi</p>
+            <p>Gaji: Semarang</p>
+            <p>5 Desember 2024</p>
+          </div>
+        </div>
+        <!-- Job Card 6 -->
+        <div class="job-card" onclick="updateDetails('Mobile Developer', 'PT.jkl', 'Denpasar', 'S1', '2 Tahun', ['Kotlin', 'Flutter', 'Mobile Development'])">
+          <img src="placeholder.png" alt="Job Image">
+          <div>
+            <h3>Mobile Developer</h3>
+            <p>PT.jkl</p>
+            <p>Gaji: Denpasar</p>
+            <p>10 Desember 2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="job-details">
+        <div class="tabs">
+          <button class="tab">Informasi Lowongan</button>
+          <button class="tab">Persyaratan</button>
+          <button class="tab">Skill</button>
+          <button class="tab">Tentang Perusahaan</button>
+        </div>
+        <div class="details">
+          <h3 id="job-title">Klik pada daftar pekerjaan untuk melihat detail</h3>
+          <p id="job-desc"></p>
+          <h4>Persyaratan</h4>
+          <ul id="requirements"></ul>
+          <h4>Skill</h4>
+          <ul id="skills"></ul>
+          <h4>Tentang Perusahaan</h4>
+          <p id="company-desc"></p>
+        </div>
+        <div class="actions">
+          <button class="lamar-btn" onclick="window.location.href='lamar'">Lamar Sekarang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/cari.js') }}"></script>
+</body>
+</html>
+
